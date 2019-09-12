@@ -6,10 +6,10 @@
     <a-layout-header class="header" :style="headerStyle">
       <a-row type="flex" justify="start" :gutter="8">
         <a-col :span="2">
-          <a-avatar style="cursor:pointer" @click="$router.push('/')" src="https://www.lucenacity.gov.ph/img/Lucena_Seal200.png" :size="50"></a-avatar>
+          <a-avatar style="cursor:pointer; border: 2px solid #FFFFFF" @click="$router.push('/')" src="http://calabarzon.dilg.gov.ph/images/lgus/quezon/seal_quezon_sanantonio.png" :size="50"></a-avatar>
         </a-col>
         <a-col :span="4">
-          <h3 style="color:white; margin-left: -6vh">Lucena City</h3>
+          <h3 style="color:white; margin-left: -6vh">San Antonio</h3>
         </a-col>
         <a-col :span="2" :push="12">
          <a-button ghost block>NEWS</a-button>
@@ -19,21 +19,20 @@
         </a-col>
         <a-col :span="2" :push="12">
          <a-button ghost block @click="signup_visible=true">SIGN-UP</a-button>
-        </a-col>
-        
+        </a-col>        
       </a-row>
     </a-layout-header>
     <a-layout-content >
       <router-view></router-view>
     </a-layout-content>
-    <a-layout-footer style="background: linear-gradient(to left, #0575e6, #021b79); color: #ffffff">
+    <a-layout-footer style="background: linear-gradient(to left, #870000, #190a05); color: #ffffff">
       <a-row>
         <a-col :span="24">
           <h1 style="color:#ffffff">Get in touch</h1>
           <!-- <a-divider></a-divider> -->
           <p><a-icon type="phone"></a-icon> Hotline: 123-3456</p>
-          <p><a-icon type="global"></a-icon> Website: <a style="color:#ffffff" href="https://www.lucenacity.gov.ph/">https://www.lucenacity.gov.ph/</a></p>
-          <p><a-icon type="facebook"></a-icon> Facebook: <a style="color:#ffffff" href="https://www.facebook.com/RoderickDondonAlcala/">lucena.city</a></p>
+          <p><a-icon type="global"></a-icon> Website: <a style="color:#ffffff" href="https://sanantonio-quezon.webs.com/">https://sanantonio-quezon.webs.com/</a></p>
+          <p><a-icon type="facebook"></a-icon> Facebook: <a style="color:#ffffff" href="https://www.facebook.com/places/Things-to-do-in-San-Antonio-Quezon/108553939169944/">sanantonio.quezon</a></p>
           <a-divider></a-divider>
         </a-col>
         
@@ -117,11 +116,11 @@ export default {
       this.topLocation = window.top.scrollY;
     },
     registerFacebook(){
-      window.open(`http://localhost:4000/auth/facebook`, "", "width=500,height=450")
+      window.open(`${process.env.VUE_APP_BASE_API_URI}/auth/facebook`, "", "width=500,height=450")
       this.signup_visible = false;
     },
     registerGoogle(){
-      window.open(`http://localhost:4000/auth/google`, "", "width=500,height=450")
+      window.open(`${process.env.VUE_APP_BASE_API_URI}/auth/facebook`, "", "width=500,height=450")
       this.signup_visible = false;
     }
   },
@@ -138,7 +137,7 @@ export default {
       if(this.topLocation < 50){
         return 'background: transparent'
       }else{
-        return 'background: linear-gradient(to right, #0575e6, #021b79)'
+        return ' background: linear-gradient(to right, #870000, #190a05);'
       }
     }
   }

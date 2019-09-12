@@ -1,16 +1,21 @@
 <template>
   <div>
-      <div style="background-image:url('https://www.lucenacity.gov.ph/images/banner7.jpg'); height:100%;background-repeat: no-repeat;
-  background-size: cover">
-      <a-row style="height:100vh" type="flex" justify="start" >
+      <div style="background-image:url('https://mediaprocessor.websimages.com/fit/1920x1920/sanantonio-quezon.webs.com/San%20Antonio-4.jpg'); height:100%;background-repeat: no-repeat;
+  background-size: cover;">
+      <!-- <div style="background: linear-gradient(to right, #fffbd5, #b20a2c)"> -->
+        <!-- <a-row type="flex" justify="center" > 
+          <a-col :span="24" style="margin-top:15vh;">
+            <a-card style="background-image:url('https://mediaprocessor.websimages.com/fit/1920x1920/sanantonio-quezon.webs.com/San%20Antonio-4.jpg'); height:100%;background-repeat: no-repeat;
+  background-size: cover;"> -->
+        <a-row style="height:100vh; " type="flex" justify="start" >
         <a-col :push="1" :span="12" style="margin-top:20vh">
-          <div style="font-size: 52px; color:#ffffff; ">Lucena City</div>
-          <div style="font-size: 42px; color:#ffffff;">Ease of Doing Business Portal</div>
-          <p style="margin-top:2vh; color:#ffffff">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div style="font-size: 52px; color:#FFFFFF ">San Antonio, Quezon</div>
+          <div style="font-size: 42px; color:#FFFFFF">Ease of Doing Business Portal</div>
+          <p style="margin-top:2vh; color:#FFFFFF">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <a-button style="margin-top:5vh"  size="large" type="primary">Read More</a-button>  
         </a-col>
         <a-col :push="2" :span="8" style="margin-top:20vh;">
-          <a-card style="background: rgba(59, 79, 99, 0.62)">
+          <a-card style="background: rgba(14, 9, 9, 0.58)">
             <template slot="title">
               <div style="color:#ffffff">Enter Crendetials</div>
             </template>
@@ -26,21 +31,25 @@
                   <a-icon slot="suffix" :type="reveal?'eye':'eye-invisible'" @click="reveal=!reveal" style="cursor:pointer"/>
                 </a-input>
               </a-form-item>
-              <a-button size="large" block ghost >Login</a-button>
+              <a-button size="large" block ghost style="margin-bottom: 2vh">Login</a-button>
+              <a href="#" style="color:#FFFFFF" @click="signup">I don't have an account. Sign me up.</a>
               <a-divider></a-divider>
-              <p style="color:white">Login using facebook or google accounts</p>
+              <p style="color:white; margin-top:-2vh">Login using facebook or google accounts</p>
               <a-row type="flex" gutter="16">
                 <a-col :span="12">
-                  <a-button block style="border: #4267B2;background-color:#4267B2; color:#FFFFFF" @click="registerFacebook"> <a-icon type="facebook"></a-icon>Facebook</a-button>
+                  <a-button class="social_btn" block style="border: #4267B2;background-color:#4267B2; color:#FFFFFF" @click="registerFacebook"> <a-icon type="facebook"></a-icon>Facebook</a-button>
                 </a-col>
                 <a-col :span="12">
-                  <a-button block @click="registerGoogle" style="border: #DE4935;background-color:#DE4935; color:#FFFFFF"> <a-icon type="google"></a-icon>Google</a-button>
+                  <a-button class="social_btn" block @click="registerGoogle" style="border: #DE4935;background-color:#DE4935; color:#FFFFFF"> <a-icon type="google"></a-icon>Google</a-button>
                 </a-col>
               </a-row>
             </a-form> 
           </a-card>
         </a-col>
-      </a-row>
+      </a-row>  
+      <!-- </a-card>
+          </a-col>
+        </a-row>           -->
       </div>
       <a-row :gutter="16" type="flex" align="middle" style="margin-top:10vh; margin-left:5vh; margin-right:5vh">
         <a-col :span="8">
@@ -116,6 +125,9 @@ export default {
     }
   },
     methods:{
+      signup(){
+        this.$emit('signup')
+      },
         registerFacebook(){
             window.open(`${process.env.VUE_APP_BASE_API_URI}/auth/facebook`, "", "width=500,height=450")
             this.signup_visible = false;
@@ -129,5 +141,8 @@ export default {
 </script>
 
 <style>
-
+.social_btn:hover{
+  opacity:0.9;
+  transform: scale(1.05);
+}
 </style>

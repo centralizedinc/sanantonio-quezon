@@ -5,8 +5,8 @@
     </a-back-top>
     <a-layout-header class="header">
       <a-row justify="start" :gutter="24">
-        <a-col :span="1"><a-avatar src="https://www.lucenacity.gov.ph/img/Lucena_Seal200.png" :size="50"></a-avatar></a-col>
-        <a-col :span="10"><h3 style="color:#ffffff; ">Lucena City</h3></a-col>
+        <a-col :span="1"><a-avatar style="border: 2px solid #ffffff" src="http://calabarzon.dilg.gov.ph/images/lgus/quezon/seal_quezon_sanantonio.png" :size="50"></a-avatar></a-col>
+        <a-col :span="10"><h3 style="color:#ffffff; ">San Antonio</h3></a-col>
         <a-col :span="10">
           <a-input-search
             placeholder="Search"
@@ -27,7 +27,7 @@
     <a-layout-content class="content" style="margin-top:10vh">
       <a-row type="flex" justify="center">
         <a-col :span="4" style="margin-right:1vw">
-          <a-card style="margin-top:10vh; margin-bottom:2vh; background: linear-gradient(to right, #0575e6, #021b79);">
+          <a-card style="margin-top:10vh; margin-bottom:2vh;  background: linear-gradient(to bottom, #870000, #190a05);">
             <a-row type="flex" justify="center"> 
               <a-col :span="8">
                 <a-avatar :src="user.avatar" :size="54" style="margin-top:-10vh; border: 2px solid #ffffff"></a-avatar>
@@ -80,7 +80,7 @@
             <p>Emergency Hotline</p>
             <a-row>
               <a-col :span="12">
-                  <a-card style="background-color:#1A1693; cursor:pointer" class="emergency_btn">
+                  <a-card style="background-color:#A31000; cursor:pointer" class="emergency_btn">
                       <a-row type="flex" justify="center">
                           <a-col :span="12">
                               <a-icon type="fire"  @click="report(1)" style="color:#ffffff;font-size:24px" ></a-icon>
@@ -89,7 +89,7 @@
                   </a-card>                  
               </a-col>
               <a-col :span="12">
-                  <a-card style="background-color:#1A1693; cursor:pointer" class="emergency_btn">
+                  <a-card style="background-color:#A31000; cursor:pointer" class="emergency_btn">
                       <a-row type="flex" justify="center">
                           <a-col :span="12">
                               <a-icon type="sound"  @click="report(1)" style="color:#ffffff;font-size:24px" ></a-icon>
@@ -98,7 +98,7 @@
                   </a-card>                  
               </a-col>
               <a-col :span="12">
-                  <a-card style="background-color:#1A1693; cursor:pointer" class="emergency_btn">
+                  <a-card style="background-color:#A31000; cursor:pointer" class="emergency_btn">
                       <a-row type="flex" justify="center">
                           <a-col :span="12">
                               <a-icon type="alert"  @click="report(1)" style="color:#ffffff;font-size:24px" ></a-icon>
@@ -107,7 +107,7 @@
                   </a-card>                 
               </a-col>
               <a-col :span="12">
-                  <a-card style="background-color:#1A1693; cursor:pointer" class="emergency_btn">
+                  <a-card style="background-color:#A31000; cursor:pointer" class="emergency_btn">
                       <a-row type="flex" justify="center">
                           <a-col :span="12">
                               <a-icon type="safety"  @click="report(1)" style="color:#ffffff;font-size:24px" ></a-icon>
@@ -124,8 +124,8 @@
         </a-col>
       </a-row>            
     </a-layout-content>
-    <a-layout-footer style="background: linear-gradient(to left, #0575e6, #021b79); color: #ffffff">
-      Lucena City
+    <a-layout-footer style="background: linear-gradient(to left, #870000, #190a05); color: #ffffff">
+      San Antonio, Quezon
     </a-layout-footer>
 
 
@@ -210,7 +210,7 @@ export default {
 
 <style>
 .emergency_btn:hover{
-  background: linear-gradient(to bottom, #0575e6, #021b79);
+  background: linear-gradient(to bottom, #870000, #190a05);
   transform: scale(0.95);
 }
 </style>
