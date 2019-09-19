@@ -114,8 +114,17 @@
           <img width="100%" src="https://bjango.com/images/mac/skalapreview2/skala-preview-hero.jpg" alt="">
         </a-col>
       </a-row>
-  </div>
+      <!-- div fb sdk -->
+      <div id="fb-root"></div>
+      
+       <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="115862123135923"
+theme_color="#fa3c4c">
+    </div>
   
+  </div>
+ 
 </template>
 
 <script>
