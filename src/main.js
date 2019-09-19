@@ -5,6 +5,9 @@ import store from './store'
 import './registerServiceWorker'
 import './plugins/ant-design-vue.js'
 
+import aos from 'aos'
+import 'aos/dist/aos.css';
+
 
 import axios from 'axios';
 import * as VueGoogleMaps from 'vue2-google-maps'
@@ -29,6 +32,9 @@ Vue.use(VueGoogleMaps, {
 
 
 new Vue({
+  created() {
+    aos.init()
+  },
   router,
   store,
   render: h => h(App)

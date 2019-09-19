@@ -17,14 +17,11 @@ passport.use(new FacebookStrategy({
 ));
 
 passport.use('google', new GoogleStrategy({
-    clientID: '958762272484-1qrbogfpk6p6qudob282dcvi99d4hh2l.apps.googleusercontent.com',
-    clientSecret: 'rrnW2XuHxyiOOYHkKWKnjasO',
+    clientID: process.env.VUE_APP_GOOGLE_CLIENT_ID,
+    clientSecret: process.env.VUE_APP_GOOGLE_CLIENT_SECRET,
     callbackURL: `${process.env.VUE_APP_BASE_API_URI}/auth/google/callback`
 },
     function (google_access_token, refreshToken, profile, done) {
-        console.log('accessToken :', google_access_token);
-        console.log('refreshToken :', refreshToken);
-        console.log('profile :', profile);
         done(null, { profile, google_access_token });
     }
 ));

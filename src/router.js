@@ -25,7 +25,12 @@ export default new Router({
           path:'permits',
           name:'permits',
           component: () => import(/* webpackChunkName: "news" */ './views/Permits.vue'),
-        }
+        },
+        // {
+        //   path:'taxes',
+        //   name:'taxes',
+        //   component: () => import(/* webpackChunkName: "news" */ './views/Taxes.vue'),
+        // }
       ]
     },
     {
@@ -40,7 +45,15 @@ export default new Router({
         {
           path:'',
           component:() => import('./views/app/Home')
-        }
+        },
+        // {
+        //   path:'permits',
+        //   component:() => import('@/components/permits/Transactions')
+        // },
+        // {
+        //   path:'taxes',
+        //   component:() => import('@/components/taxes/Transactions')
+        // }
       ]
     }
   ],
