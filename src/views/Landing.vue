@@ -117,7 +117,7 @@
   <div id="fb-root"></div>
    <div class="fb-customerchat"
       attribution=setup_tool
-      page_id="115862123135923"
+      page_id="120856622635394"
       theme_color="#fa3c4c">
     </div>
   </div>
@@ -167,7 +167,7 @@ export default {
     <script>
       window.fbAsyncInit = function() {
         FB.init({
-          appId: "2463482707080808",
+          appId: "394573761441193",
           xfbml            : true,
           version          : 'v4.0'
         });
