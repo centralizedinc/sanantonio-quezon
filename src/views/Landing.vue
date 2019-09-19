@@ -114,7 +114,17 @@
           <img width="100%" src="https://bjango.com/images/mac/skalapreview2/skala-preview-hero.jpg" alt="">
         </a-col>
       </a-row>
+      <!-- div fb sdk -->
+      <div id="fb-root"></div>
+
+       <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="115862123135923"
+      theme_color="#fa3c4c">
+    </div>
+  
   </div>
+ 
 </template>
 
 <script>
@@ -135,10 +145,62 @@ export default {
         registerGoogle(){
             window.open(`${process.env.VUE_APP_BASE_API_URI}/auth/google`, "", "width=500,height=450")
             this.signup_visible = false;
-        }
+        },
+
     }
+
 }
+
+
+        // Facebook SDK plugin
+
+//         window.fbAsyncInit = function() {
+//   FB.init({
+//     appId: "2463482707080808",
+//     xfbml: true,
+//     version: "v4.0"
+//   });
+// };
+
+// (function(d, s, id) {
+//   var js,
+//     fjs = d.getElementsByTagName(s)[0];
+//   if (d.getElementById(id)) return;
+//   js = d.createElement(s);
+//   js.id = id;
+//   js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+//   fjs.parentNode.insertBefore(js, fjs);
+// })(document, "script", "facebook-jssdk");
+
+
 </script>
+<script>
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: "2463482707080808",
+          xfbml            : true,
+          version          : 'v4.0'
+        });
+      };
+
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 <style>
 .social_btn:hover{
