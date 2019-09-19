@@ -17,8 +17,8 @@ passport.use(new FacebookStrategy({
 ));
 
 passport.use('google', new GoogleStrategy({
-    clientID: '271549267606-fd6h2lphs0lft2ldg7m22mufau4lo9jq.apps.googleusercontent.com',
-    clientSecret: 'ZpwIOSXOLx7hfVn1RCTUbpXR',
+    clientID: '958762272484-1qrbogfpk6p6qudob282dcvi99d4hh2l.apps.googleusercontent.com',
+    clientSecret: 'rrnW2XuHxyiOOYHkKWKnjasO',
     callbackURL: `${process.env.VUE_APP_BASE_API_URI}/auth/google/callback`
 },
     function (google_access_token, refreshToken, profile, done) {
