@@ -118,7 +118,7 @@
    <div class="fb-customerchat"
       attribution=setup_tool
       page_id="115862123135923"
-theme_color="#fa3c4c">
+      theme_color="#fa3c4c">
     </div>
   </div>
  
