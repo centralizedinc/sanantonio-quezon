@@ -114,12 +114,12 @@
           <img width="100%" src="https://bjango.com/images/mac/skalapreview2/skala-preview-hero.jpg" alt="">
         </a-col>
       </a-row>
-  <div id="fb-root"></div>
+  <!-- <div id="fb-root"></div>
    <div class="fb-customerchat"
       attribution=setup_tool
       page_id="120856622635394"
       theme_color="#fa3c4c">
-    </div>
+    </div> -->
   </div>
  
 </template>
@@ -147,39 +147,9 @@ export default {
     }
 
 }
-
-
         </script>
         
 
-<script>
-// Facebook SDK plugin
-      (function(d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId: "394573761441193",
-          xfbml            : true,
-          version          : 'v4.0'
-        });
-      };
-
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 
 <style>
 .social_btn:hover{
